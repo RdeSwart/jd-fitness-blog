@@ -1,131 +1,276 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# JD Fitness
 
-Welcome USER_NAME,
+JD Fitness is a fitness blog site, which offers great advise and support to those who are interested in keeping fit and healthy, or to those looking to change their lifestyle and don’t know where to start.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Am I responsive image](put here)
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+[Click here to view the live site]( link)
 
-## Gitpod Reminders
+## Table of Contents
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* [Agile Methodology](#agile-methodology)
 
-`python3 -m http.server`
+* [User Experience(UX)](#user-experience)
 
-A blue button should appear to click: _Make Public_,
+* [Strategy / Site Goals](#strategy—site-goals)
 
-Another blue button should appear to click: _Open Browser_.
+* [Scope / User Stories](#scope- - user-stories)
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+* [Structure / Design](#structure - - design)
 
-A blue button should appear to click: _Make Public_,
+* [Skeleton / Wireframes](#skeleton - - wireframes)
 
-Another blue button should appear to click: _Open Browser_.
+* [Surface](#surface)
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* [Features](#features)
 
-To log into the Heroku toolbelt CLI:
+* [Current Features](#current-features)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* [Future Features](#future-features)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+[Technologies Used](#technologies-used)
 
-### Connecting your Mongo database
+[Testing](#testing)
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+[Bugs](#bugs)
 
-------
+[Deployment](#deployment)
 
-## Release History
+* [Cloning](#cloning-the-repository)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+* [Forking](#forking-the-repository)
 
-**June 18, 2024,** Add Mongo back into template
+[Credits](#credits)
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
 
-**May 28 2024:** Fix Mongo and Links installs
+## Agile Methodology
 
-**April 26 2024:** Update node version to 16
+Using the Agile Methodology, I was able to plan and manage this project by breaking up the tasks into smaller, more manageable phases, which keeps the project focused and constantly progressing forward.
 
-**September 20 2023:** Update Python version to 3.9.17.
+I used Github Issues to document user stories[see here](#link), where each user story contained an Acceptance criteria and the tasks detailed in order to fulfil that criteria.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+To give prioritization, I used the [MoSCoW Method](#link-it-here). The acronym MoSCoW represents four categories of initiatives: must-have, should-have, could-have, and won't-have, or will not have right now. MORE ON THIS WHEN THEY WRITTEN!!
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+Here is the Kanban Board I used to keep everything in order ![screenshot of Kanban](link)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Review of agile method:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+This was my first time using the agile method on my own project. As someone with ADHD, I found this such a great help to get my thoughts organised. It helped me manage my time better and prioritizing tasks, without getting distracted by the “look” or design was invaluable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+[Back to Top](#back-to-top)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## User Experience
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Strategy / Site Goals:
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+As the site owner, the goals for JD Fitness is to attract people to the website and generate more clients. The site aims to educate those who have little or no knowledge of the proper practices of fitness or the science behind food health and safety by having Degree-educated personnel writing and running the site.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+The target audience for JD Fitness, are people trying to lose weight and become healthier.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Scope / User Stories:
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+#### As a visitor:
 
-------
+* I want to browse blog posts at a glance to learn more about health and fitness.
 
-## FAQ about the uptime script
+* I want to be able to open a single blog post to read more about it.
 
-**Why have you added this script?**
+* I want to be able to register for an account.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+*
 
-**How will this affect me?**
+#### As a registered user:
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+* I want to be able to login to my account.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+* I want to be able to comment on a blog post.
 
-**So….?**
+* I want to be able to peruse through fitness/health courses on offer.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+* I want to be able to purchase a course securely.
 
-**Can I opt out?**
+* I want to be able to have access to my purchased courses.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+* I want to receive email notifications about new blog posts, courses or any promotions.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+* I want to be able to log out successfully and get notified about it.
 
-**Anything more?**
+* I want to be able to create, edit and delete blog posts.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+* I want to be able to personalise my profile
 
----
 
-Happy coding!
+#### As an administrator/owner:
+
+
+* I want to be able to add, edit and delete fitness courses.
+
+* I want to manage user accounts and moderate public comments to keep the site safe.
+
+* I would like all services to be visible on the landing Home page.
+
+#### As a developer:
+
+* ????
+
+### Structure / Design
+
+It was very important for the site to be responsive on most, if not all screen sizes, as JD Fitness wants the site to be available to users even when “on the go”. It is available on screens from 320px to 2560px sizes. This was made possible by using Bootstrap.????????
+
+The navigation and Footer elements of the site are the same on every page to give a more uniform look.
+
+#### Home Page
+
+#### About Page
+
+#### Registration Page
+
+#### Login Page
+
+#### Course Page
+
+## Skeleton / Wireframes
+
+Balsamiq link images here
+
+## Surface Plane
+
+* Colour Scheme:
+
+JD Fitness wanted to give a modern, energetic feel to the website.
+
+Colours used are:…..
+
+* Typography:
+
+Google fonts:
+
+Font Awesome: social media icons
+
+[Back to Top](#back-to-top)
+
+
+## Features
+
+### Current Features
+
+Different pages and their features….
+
+404,403,500 pages… styles are consistent with the site(and also responsive)
+
+<summary>Click to view screenshots</summary>
+
+[Back to Top](#back-to-top)
+
+### Future Features
+
+Stripe payments etc
+
+[Back to Top](#back-to-top)
+
+## Technologies Used
+
+### Languages
+
+* HTML5
+
+* CSS3
+
+* Python
+
+### Libraries & Frameworks
+
+* Django 3.2.18
+
+* Gunicorn 20.1.0
+
+* PostgreSQL type
+
+* Psycopg2 type
+
+* Cloudinary
+
+* Heroku
+
+* ElephantSQL?
+
+* Django AllAuth
+
+* Bootstrap
+
+* Crispy Forms
+
+Google fonts, font awesome, balsamiq, am I responsive, gitpod, github, python linter w3c css validation etc
+
+[Back to Top](#back-to-top)
+
+## Testing
+
+Please see [here](#testing.md) for info on testing
+
+### Bugs
+
+Bug encountered:
+
+Bug Fix:
+
+Any unfixed Bugs:
+
+[Back to Top](#back-to-top)
+
+## Deployment
+
+Steps to deploy
+
+1. 2. 3. Etc
+
+
+### Cloning the repository
+
+To Clone the repository:
+
+1. Go to the [Github repostitory](https://)
+
+2. Click on the “<>Code” button located above the list of files
+
+3. Choose whether you prefer to clone using HTTPS, SSH or GitHub CI.
+
+4. Copy the URL to clipboard
+
+```git@github.com:RdeSwart/fitness```
+
+5. Open Git Bash or Terminal
+
+6. Change the current working directory to where you would like the cloned directory.
+
+7. In the IDE terminal, paste the link
+
+8. Press Enter to create the local clone
+
+### Forking the Repository
+
+To for the repository:
+
+1. Open the [Github repostitory](https://)
+
+2. Click on the “Fork” button at the top of the screen
+
+3. On “Create New Fork” page, rename the repository.
+
+4. Click “Create Fork” at the bottom of the form.
+
+## Credits
+
+* Code Institute’s walkthrough project: “I think therefore I blog
+
+### Media used
+
+* Logo is from:
+
+* Images from:
+
+[Back to Top](#back-to-top)
