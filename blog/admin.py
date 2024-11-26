@@ -8,11 +8,3 @@ admin.site.register(BlogPost)
 
 #Allows you to approve comments and customises the data
 admin.site.register(Comment)
-class CommentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'body', 'post', 'created_on')
-    list_filter = ('created_on')
-    search_fields = ('name', 'body')
-    actions = ['approve_comments']
-
-    def approve_comments(self, request, queryset):
-        queryset.update(active=True)
