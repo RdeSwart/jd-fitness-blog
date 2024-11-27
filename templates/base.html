@@ -1,5 +1,6 @@
 {% load static %}
 {% url 'home' as home_url %}
+{% url 'about' as about_url %}
 
 
 <!doctype html>
@@ -22,10 +23,10 @@
     <!--Navigation-->
     <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link active" href="{%url 'home' %}">Home</a>
+          <a class="nav-link {% if request.path == home_url %}active{%endif%} active" href="{%url 'home' %}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link {% if request.path == about_url %}active{%endif%}" href="{% url 'about' %}">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
