@@ -18,6 +18,7 @@
     <title>JD Fitness</title>
   </head>
   <body>
+
     <!--Navigation-->
     <ul class="nav">
         <li class="nav-item">
@@ -33,7 +34,10 @@
             <a class="nav-link" href="#">Register/Login</a>
           </li>
       </ul>
-    <h1>Hello, world!</h1>
+    
+    {% block content %}
+    <!-- Main content goes here -->
+    {% endblock %}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

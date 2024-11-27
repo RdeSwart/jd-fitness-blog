@@ -1,3 +1,7 @@
+{% extends "base.html" %}
+{% load static %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,12 +31,9 @@
             <a class="nav-link" href="#">Register/Login</a>
           </li>
       </ul>
-    <!-- <h1>Jd Fitness Blog</h1>
-    {% for post in object_list %}
-    <h2>{{post.title}}</h2>
-    <p>{{post.excerpt}}</p>
-    <p>Written By: {{post.blog_author}}</p>
-    {% endfor %} -->
+    
+{% block content%}
+    <!--Blog List-->
     <div class="jumbotron">
         <h1 class="display-4">Jd Fitness Blog</h1>
         {% for post in object_list %}
@@ -41,7 +42,7 @@
         <p>{{post.excerpt}}</p>
         <p>Written By: {{post.blog_author}}</p>
         <p>{{post.created_on.date}}</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Read More</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'post_detail' post.slug %}" class="post-link" class="post-link">Read More</a>
         {% endfor %}
         
     </div>
@@ -67,3 +68,5 @@
 </body>
 
 </html>
+
+{% endblock%}
