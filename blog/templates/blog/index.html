@@ -40,10 +40,25 @@
         <hr class="my-4">
         <p>{{post.excerpt}}</p>
         <p>Written By: {{post.blog_author}}</p>
+        <p>{{post.created_on.date}}</p>
         <a class="btn btn-primary btn-lg" href="#" role="button">Read More</a>
         {% endfor %}
         
     </div>
+    <ul class="pagination justify-content-center">
+      {% if page_obj.has_previous %}
+      <li>
+          <a href="?page={{ page_obj.previous_page_number }}"
+            class="page-link">&laquo; PREV</a>
+      </li>
+      {% endif %}
+      {% if page_obj.has_next %}
+      <li>
+          <a href="?page={{ page_obj.next_page_number }}"
+            class="page-link">NEXT &raquo;</a>
+      </li>
+      {% endif %}
+  </ul>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
