@@ -1,8 +1,21 @@
 body {
-    background-color: brown;
+    background-color: rgb(245, 240, 240);
+}
+
+a {
+    color: rgb(12, 11, 11);
 }
 
 .scale {
     width: 100%;
     height: auto;
+}
+.btn-primary {
+    background-color: rgb(224, 220, 220);
+    color: rgb(12, 11, 11);
+    border-color: rgb(12, 11, 11);
+}
+
+.footer-section {
+    background-color: rgb(224, 220, 220);
 }
