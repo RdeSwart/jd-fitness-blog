@@ -2,17 +2,36 @@
 {% load static %}
 
 {% block content%}
+<header>
+  <!-- Background image -->
+  <div class="p-5 text-center bg-image"><img src="static/images/main-image-unsplash.jpg" style="height: 400;">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3">Welcome to Jd Fitness</h1>
+          <h4 class="mb-3">Join our Fitness Family</h4>
+          <a data-mdb-ripple-init class="btn btn-outline-light btn-lg" href="{% url 'account_signup' %}"
+            role="button">Register Here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- Background image -->
+</header>
+
 <!--Blog Entries List-->
 
 <div class="container-fluid">
   <div class="row">
 
     <!-- Blog Entries Column -->
-    <div class="col-12 mt-3 left">
+
+    <div class="col-12 mt-2 left">
       <div class="row">
         {% for post in object_list %}
-        <div class="col-md-4">
-          <div class="card mb-4">
+        <div class="col-md-6">
+          <div class="card mb-6">
             <div class="card-body">
               <div class="image-container">
                 <div class="image-flash">
@@ -31,7 +50,7 @@
             </div>
           </div>
         </div>
-        {% if forloop.counter|divisibleby:3 %}
+        {% if forloop.counter|divisibleby:2 %}
       </div>
       <div class="row">
 
