@@ -30,13 +30,12 @@ class Comment(models.Model):
     Comment model allows user to comment on a blog
     """
     post = models.ForeignKey(BlogPost, on_delete=models.CASCADE, related_name="comments")
-    name = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
     body = models.TextField()
-    approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ["-created_on"]
     
     def __str__(self):
-        return 'Comment {} by {}'.format(self.body, self.name)
+        return f"Comment {self.post} by {self.author}"
