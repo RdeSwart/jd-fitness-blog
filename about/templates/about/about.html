@@ -1,20 +1,29 @@
 {% extends 'base.html' %}
-{% block content %}
 {% load static %}
 
+{% block title%}How I can help you.{% endblock%}
+{% block content %}
 
 <div class="container mt-5">
     <div class="row">
         <div class="col-4 text-center">
-            <img src="{% static 'images/jd-fitness.jpg' %}" width="50%" alt="Profile picture of owner Josh" />
+            <img src="{% static 'images/jd-fitness.jpg' %}" class="img-fluid" alt="Profile picture of owner Josh" />
         </div>
         <div class="col-12">
             <!-- Title goes between these h2 tags -->
             <h2>{{ about.title }}</h2>
             <!-- Content goes directly underneath this -->
-            {{ about.content | safe }}
+            <p>{{ about.content | safe }}</p>
+        </div>
+        <div class="container mt-5 mx-auto">
+            <div class="row">
+                <div class="col-4 text-center">
+                    <p>Want to get in touch to find out more?</p>
+                    <a class="nav-link" href="{% url 'contact' %}">Click Here</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-</div>
+
 {% endblock content %}
