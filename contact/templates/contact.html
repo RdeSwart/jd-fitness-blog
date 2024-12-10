@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block title%}Get in Touch{% endblock%}
+{% block content%}
+
+<div class="container contact-form">
+  <div class="container text-right">
+    <h1>Contact Us</h1>
+    <form method="post">
+      <div class="form-content">
+        {% csrf_token %}
+        {{ contact_form | crispy }}
+      </div>
+      <p><input type="submit" value="Submit" class="btn btn-signup btn-lg"></p>
+    </form>
+  </div>
+  <!-- Content here -->
+</div>
+{% endblock%}
