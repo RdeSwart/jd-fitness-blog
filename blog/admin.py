@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import BlogPost, Comment
+from .models import BlogPost, Comment, Category
 from django_summernote.admin import SummernoteModelAdmin
 
 # Register your models here.
@@ -19,3 +19,4 @@ class PostAdmin(SummernoteModelAdmin):
 
 #Allows you to approve comments and customises the data
 admin.site.register(Comment)
+admin.site.register(Category)

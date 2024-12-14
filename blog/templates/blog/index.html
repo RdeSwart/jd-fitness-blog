@@ -8,7 +8,8 @@
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
           <h1 class="mb-3">Welcome to Jd Health Fitness</h1>
-          <h4 class="mb-3">I'm here to help you on your health and fitness journey. Let me tell you why we could be a great fit.</h4>
+          <h4 class="mb-3">I'm here to help you on your health and fitness journey. Let me tell you why we could be a
+            great fit.</h4>
           <a data-mdb-ripple-init class="btn btn-outline-light btn-lg about-btn" href="{% url 'about' %}"
             role="button">Learn More</a>
         </div>
@@ -16,13 +17,13 @@
     </div>
   </div>
   </div>
-  
+
 </header>
 
 <!--Blog Entries List-->
 
 <div class="container-fluid">
-  <div class="row">
+  <div class="row justify-content-center">
 
     <!-- Blog Entries Column -->
 
@@ -30,21 +31,25 @@
       <div class="row">
         {% for post in object_list %}
         <div class="col-md-6">
-          <div class="card mb-6">
+          <div class="blog-teaser card mb-6 h-100 w-90">
             <div class="card-body">
-              <div class="image-container">
+              <div class="teaser-image image-container">
                 <img src="{% static 'images/nobody.jpg' %}" class="img-fluid">
                 <div class="image-flash">
                   <p class="author">Written by: {{post.blog_author}}</p>
                 </div>
               </div>
-              <h2 class="card-title">{{ post.title }}</h2>
+              <h2 class="card-title text-center">{{ post.title }}</h2>
               <p class="card-text">{{ post.excerpt }}</p>
               </a>
 
               <hr />
-              <p class="card-text text-muted h6">{{ post.created_on}}
-              </p>
+              <small>
+                <p class="card-text text-muted h6">{{ post.created_on}} | Categories:
+                  {% for category in post.categories.all %}
+                  <a href="{% url 'blog_category' category.name %}">{{ category.name }}</a> {% endfor %}
+                </p>
+              </small>
               <a class="btn btn-primary btn-lg" href="{% url 'post_detail' post.slug %}" class="post-link"
                 class="post-link">Read More</a>
             </div>
@@ -60,6 +65,7 @@
       </div>
     </div>
   </div>
+  <br>
 
   <!--Pagination-->
   <ul class="pagination justify-content-center">

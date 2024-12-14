@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+# Blog Post Model
 class BlogPost(models.Model):
     """
     post model allows superuser to write a blog post
@@ -17,6 +18,7 @@ class BlogPost(models.Model):
     excerpt = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
+    categories = models.ManyToManyField("Category", related_name="posts")
 
     class Meta:
         ordering = ["-created_on"]
@@ -24,7 +26,20 @@ class BlogPost(models.Model):
     def __str__(self):
         return f"{self.title} | written by: {self.blog_author}"
 
+# Category Model
+class Category(models.Model):
+    """
+    Category model allows blog posts to be put into categories
+    """
+    name = models.CharField(max_length=30)
 
+    class Meta:
+        verbose_name_plural = "categories"
+    def __str__(self):
+        return self.name
+
+
+#Comments Model
 class Comment(models.Model):
     """
     Comment model allows user to comment on a blog

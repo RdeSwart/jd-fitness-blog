@@ -15,6 +15,18 @@ class BlogDetail(generic.ListView):
     paginate_by = 6
 
 
+# Category View
+def blog_category(request, category):
+    posts = Post.objects.filter(
+        categories_name_contains=category
+    ).order_by("-created_on")
+    context = {
+        "category": category,
+        "posts": posts,
+    }
+    return render(request, "blog/category.html", context)
+
+
 def post_detail(request, slug):
     """
     Renders the view for each blog post entry and its 
