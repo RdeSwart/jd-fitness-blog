@@ -1,9 +1,17 @@
+/* General Styles */
+
 body {
     background-color: rgb(245, 240, 240);
 }
 
 a {
     color: rgb(12, 11, 11);
+}
+
+.btn {
+    background-color: rgb(224, 220, 220);
+    color: rgb(12, 11, 11);
+    border-color: rgb(12, 11, 11);
 }
 
 .btn:hover {
@@ -16,11 +24,6 @@ a {
     width: 100%;
     height: auto;
 }
-.btn {
-    background-color: rgb(224, 220, 220);
-    color: rgb(12, 11, 11);
-    border-color: rgb(12, 11, 11);
-}
 
 .page-link {
     color: rgb(12, 11, 11);
@@ -30,4 +33,20 @@ a {
     background-color: rgb(224, 220, 220);
 }
 
+/* Header on main page */
+.mask {
+    background: linear-gradient(45deg, black, transparent);
+}
+
+/* Blog List on main page */
+.blog-teaser {
+    border-radius: 33px;
+    border-bottom-width: 8px;
+}
+
+.teaser-image {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 

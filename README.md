@@ -47,7 +47,7 @@ JD Fitness is a fitness blog site, which offers great advise and support to thos
 
 Using the Agile Methodology, I was able to plan and manage this project by breaking up the tasks into smaller, more manageable phases, which keeps the project focused and constantly progressing forward.
 
-I used Github Issues to document user stories[see here](#link), where each user story contained an Acceptance criteria and the tasks detailed in order to fulfil that criteria.
+I used Github Issues to document user stories [see here](#https://github.com/users/RdeSwart/projects/3/views/1), where each user story contained an Acceptance criteria and the tasks detailed in order to fulfil that criteria.
 
 To give prioritization, I used the [MoSCoW Method](#link-it-here). The acronym MoSCoW represents four categories of initiatives: must-have, should-have, could-have, and won't-have, or will not have right now. MORE ON THIS WHEN THEY WRITTEN!!
 
@@ -66,9 +66,9 @@ This was my first time using the agile method on my own project. As someone with
 
 ### Strategy / Site Goals:
 
-As the site owner, the goals for JD Fitness is to attract people to the website and generate more clients. The site aims to educate those who have little or no knowledge of the proper practices of fitness or the science behind food health and safety by having Degree-educated personnel writing and running the site.
+As the site owner, the goals for JD Health Fitness is to attract people to the website and generate more clients. The site aims to educate those who have little or no knowledge of the proper practices of fitness or the science behind food health and safety by having Degree-educated personnel writing and running the site.
 
-The target audience for JD Fitness, are people trying to lose weight and become healthier.
+The target audience for JD Fitness, are people trying to lose weight, gain more muscle, become fitter and more healthy in mind and body.
 
 ### Scope / User Stories:
 
@@ -80,7 +80,7 @@ The target audience for JD Fitness, are people trying to lose weight and become 
 
 * I want to be able to register for an account.
 
-*
+
 
 #### As a registered user:
 
@@ -95,17 +95,17 @@ The target audience for JD Fitness, are people trying to lose weight and become 
 
 * I want to be able to have access to my purchased courses.
 
-* I want to receive email notifications about new blog posts, courses or any promotions.
+* I want to receive email notifications/newsletter about new blog posts, courses or any promotions.
 
 * I want to be able to log out successfully and get notified about it.
 
-* I want to be able to create, edit and delete blog posts.
 
 * I want to be able to personalise my profile
 
 
 #### As an administrator/owner:
 
+* I want to be able to write, edit, draft and publish blog posts and promotions
 
 * I want to be able to add, edit and delete fitness courses.
 
@@ -119,11 +119,13 @@ The target audience for JD Fitness, are people trying to lose weight and become 
 
 ### Structure / Design
 
-It was very important for the site to be responsive on most, if not all screen sizes, as JD Fitness wants the site to be available to users even when “on the go”. It is available on screens from 320px to 2560px sizes. This was made possible by using Bootstrap.????????
+It was very important for the site to be responsive on most, if not all screen sizes, as JD Fitness wants the site to be available to users even when “on the go”. It is available on screens from 320px to 2560px sizes. This was made possible by using Bootstrap
 
 The navigation and Footer elements of the site are the same on every page to give a more uniform look.
 
 #### Home Page
+
+Going for a modern, sleek design to show the vibe of the company, which takes on a young, vibrant and modern approach to health and fitness. The owner wanted a very simple and sleek design and decided that greys and whites worked best for their aesthetic.
 
 #### About Page
 
