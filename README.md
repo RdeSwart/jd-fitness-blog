@@ -8,39 +8,41 @@ JD Fitness is a fitness blog site, which offers great advise and support to thos
 
 ## Table of Contents
 
-* [Agile Methodology](#agile-methodology)
+1. [Agile Methodology](#agile-methodology)
 
-* [User Experience(UX)](#user-experience)
+2. [CRUD Functionality](#crud-functionality)
 
-* [Strategy / Site Goals](#strategy—site-goals)
+3. [User Experience(UX)](#user-experience)
 
-* [Scope / User Stories](#scope- - user-stories)
+4. [Strategy / Site Goals](#strategy—site-goals)
 
-* [Structure / Design](#structure - - design)
+    * [Scope / User Stories](#scope- - user-stories)
 
-* [Skeleton / Wireframes](#skeleton - - wireframes)
+    * [Structure / Design](#structure - - design)
 
-* [Surface](#surface)
+    * [Skeleton / Wireframes](#skeleton - - wireframes)
 
-* [Features](#features)
+    * [Surface](#surface)
 
-* [Current Features](#current-features)
+5. [Features](#features)
 
-* [Future Features](#future-features)
+    * [Current Features](#current-features)
 
-[Technologies Used](#technologies-used)
+    * [Future Features](#future-features)
 
-[Testing](#testing)
+6. [Technologies Used](#technologies-used)
 
-[Bugs](#bugs)
+7. [Testing](#testing)
 
-[Deployment](#deployment)
+8. [Bugs](#bugs)
 
-* [Cloning](#cloning-the-repository)
+9. [Deployment](#deployment)
 
-* [Forking](#forking-the-repository)
+    * [Cloning](#cloning-the-repository)
 
-[Credits](#credits)
+    * [Forking](#forking-the-repository)
+
+10. [Credits](#credits)
 
 
 ## Agile Methodology
@@ -61,16 +63,24 @@ This was my first time using the agile method on my own project. As someone with
 
 [Back to Top](#back-to-top)
 
+## CRUD Functionality
+This site operates with full CRUD (Create, Read, Update and Delete) functionality as outlined below:
+
+* Create: Users can create and account, create a comment and a contact form message.
+* Read: Users can read the blog posts in their entirety but clicking on the "Read More" button
+* Update: Users can update their comments by editing them, they can update their passwords also using allauth.
+* Delete: Users have the option to delete their comments.
+
 
 ## User Experience
 
-### Strategy / Site Goals:
+### <ins>Strategy / Site Goals:</ins>
 
 As the site owner, the goals for JD Health Fitness is to attract people to the website and generate more clients. The site aims to educate those who have little or no knowledge of the proper practices of fitness or the science behind food health and safety by having Degree-educated personnel writing and running the site.
 
 The target audience for JD Fitness, are people trying to lose weight, gain more muscle, become fitter and more healthy in mind and body.
 
-### Scope / User Stories:
+### <ins>Scope / User Stories:</ins>
 
 #### As a visitor:
 
@@ -117,7 +127,7 @@ The target audience for JD Fitness, are people trying to lose weight, gain more 
 
 * ????
 
-### Structure / Design
+### <ins>Structure / Design</ins>
 
 It was very important for the site to be responsive on most, if not all screen sizes, as JD Fitness wants the site to be available to users even when “on the go”. It is available on screens from 320px to 2560px sizes. This was made possible by using Bootstrap
 
@@ -149,7 +159,7 @@ Colours used are:…..
 
 * Typography:
 
-Google fonts:
+Google fonts: I used Google Font for the website, deciding that "Playfair Display" best suited the site aesthetic, with a fall back on serif, should the font not load.
 
 Font Awesome: social media icons
 
@@ -158,7 +168,41 @@ Font Awesome: social media icons
 
 ## Features
 
-### Current Features
+### <ins>Current Features</ins>
+
+#### <ins>Data Models: Blog App</ins>
+##### User Model
+As part of the Django inbuilt AllAuth library, this model holds information about the user.
+##### BlogPost Model
+The BlogPost model object represents the individual blog posts created by the superuser. It consists of the following fields:
+* blog_author: ForeignKey(User)
+* title: CharField
+* slug: SlugField
+* content: TextField
+* excerpt: TextField
+* created_on: DateTimeField
+* status: IntegerField
+* categories: ManyToManyField
+##### Category Model
+The Category Model object represents the blog posts being organised into different categories for better UX. It consists of the following fields:
+* name: Charfield
+##### Comments Model
+The Comment Model object allows users to comment on blog posts. It consists of the following fields:
+* post: ForeignKey
+* author: ForeignKey
+* body: TextField
+* created_on: DateTimeField
+
+#### <ins>Data Models: Contact App</ins>
+The Contact Model object allows users to send a message to the amin/superuser.It consists of the following fields:
+* email: EmailField
+* subject: CharField
+* message: TextField
+
+#### <ins>Data Models: About App</ins>
+The About Model object renders an About the Owner page to give more information to the user about the credentials of the site owner and the advise he gives.It consists of the following fields:
+* title: CharField
+* content: TextField
 
 Different pages and their features….
 
@@ -168,7 +212,7 @@ Different pages and their features….
 
 [Back to Top](#back-to-top)
 
-### Future Features
+### <ins>Future Features</ins>
 
 Stripe payments etc
 
@@ -176,7 +220,7 @@ Stripe payments etc
 
 ## Technologies Used
 
-### Languages
+### <ins>Languages</ins>
 
 * HTML5
 
@@ -184,7 +228,7 @@ Stripe payments etc
 
 * Python
 
-### Libraries & Frameworks
+### <ins>Libraries & Frameworks</ins>
 
 * Django 3.2.18
 
@@ -214,7 +258,7 @@ Google fonts, font awesome, balsamiq, am I responsive, gitpod, github, python li
 
 Please see [here](#testing.md) for info on testing
 
-### Bugs
+### <int>Bugs</int>
 
 Bug encountered:
 
@@ -226,9 +270,11 @@ Any unfixed Bugs:
 
 ## Deployment
 
-Steps to deploy
+<ins>Steps to deploy to Heroku</ins>
 
-1. 2. 3. Etc
+Heroku is a container-based cloud Platform as a Service (PaaS). I used it to host JD Health & Fitness. I deployed to Heroku early so that I could continuely test and access the site's features, responsiveness and database access. The steps needed to deploy are:
+1. Use ```pip freeze -> requirements.txt``` command to save any libraries that need to be installed in the file.
+2. postgres...
 
 
 ### Cloning the repository
@@ -237,7 +283,7 @@ To Clone the repository:
 
 1. Go to the [Github repostitory](https://)
 
-2. Click on the “<>Code” button located above the list of files
+2. Click on the ```<>Code``` button located above the list of files
 
 3. Choose whether you prefer to clone using HTTPS, SSH or GitHub CI.
 
@@ -267,7 +313,7 @@ To for the repository:
 
 ## Credits
 
-* Code Institute’s walkthrough project: “I think therefore I blog
+* Code Institute’s walkthrough project: “I think therefore I blog"
 
 ### Media used
 
@@ -276,3 +322,7 @@ To for the repository:
 * Images from:
 
 [Back to Top](#back-to-top)
+
+
+| Feature    | Action    | Expected Result      | Pass/Fail   |
+| Landing Page| 
