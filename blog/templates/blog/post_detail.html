@@ -51,7 +51,27 @@
             <hr>
         </div>
     </div>
+    <!-- Displaying count of likes -->
+    <div class="likes-counter">
+        <div>
+            {% if user.is_authenticated %}
+            <form action="{% url 'blogpost_like' post.slug %}" method="POST">
+                {% csrf_token %}
 
+                {% if liked %}
+                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn btn-info"><i
+                        class="fa-solid fa-hands-clapping"></i></button>
+                {% else %}
+                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="clapping btn btn-info"><i
+                        class="fa-solid fa-hands-clapping"></i></button> 
+                        <strong class="text-secondary">{{ post.number_of_likes }}</strong>
+                {% endif %}
+            </form>
+            {% else %}
+            <p><a class="link" href="{{ login_url }}">Log in</a> to like this article</p>
+            {% endif %}
+        </div>
+    </div>
 
     <!-- Displaying Comments -->
     <div class="row">

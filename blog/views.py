@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.http import HttpResponseRedirect
-from django.views import generic
+from django.views import generic, View
 from django.contrib import messages
 from .models import BlogPost, Comment, Category
 from .forms import CommentForm
@@ -32,12 +32,18 @@ def post_detail(request, slug):
     """
     Renders the view for each blog post entry and its 
     content based on blogs slug.
+    Displays any comments related to this blog post.
+    Displays likes and if user has liked already.
     """
 
     queryset = BlogPost.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.order_by("-created_on")
     comment_count = post.comments.count()
+    like = False
+
+    if post.likes.filter(id=request.user.id).exists():
+        like=True
 
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
@@ -62,6 +68,7 @@ def post_detail(request, slug):
         "comments" : comments,
         "comment_count" : comment_count,
          "comment_form": comment_form,
+         "liked": like,
          },
         
     )
@@ -106,3 +113,18 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+# Likes View
+class BlogPostLike(View):
+    """
+    Allows user to like or unlike a blog post
+    """
+    def post(self, request, slug):
+        post = get_object_or_404(BlogPost, slug=slug)
+
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))

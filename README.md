@@ -4,7 +4,7 @@ JD Fitness is a fitness blog site, which offers great advise and support to thos
 
 ![Am I responsive image](put here)
 
-[Click here to view the live site]( link)
+[Click here to view the live site]( https://jd-fitness-blog-a23552dd7129.herokuapp.com/)
 
 ## Table of Contents
 
@@ -281,7 +281,7 @@ Heroku is a container-based cloud Platform as a Service (PaaS). I used it to hos
 
 To Clone the repository:
 
-1. Go to the [Github repostitory](https://)
+1. Go to the [Github repostitory](https://github.com/RdeSwart/jd-fitness-blog)
 
 2. Click on the ```<>Code``` button located above the list of files
 
@@ -303,7 +303,7 @@ To Clone the repository:
 
 To for the repository:
 
-1. Open the [Github repostitory](https://)
+1. Open the [Github repostitory](https://github.com/RdeSwart/jd-fitness-blog)
 
 2. Click on the “Fork” button at the top of the screen
 
