@@ -2,10 +2,10 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.http import HttpResponseRedirect
 from django.views import generic
 from django.contrib import messages
-from .models import BlogPost, Comment
+from .models import BlogPost, Comment, Category
 from .forms import CommentForm
 
-# Create your views here.
+# Overview list of blogs View
 class BlogDetail(generic.ListView):
     """
     Renders Blog enteries in jumbotron view
@@ -17,8 +17,8 @@ class BlogDetail(generic.ListView):
 
 # Category View
 def blog_category(request, category):
-    posts = Post.objects.filter(
-        categories_name_contains=category
+    posts = BlogPost.objects.filter(
+        categories__name__contains=category
     ).order_by("-created_on")
     context = {
         "category": category,
@@ -27,6 +27,7 @@ def blog_category(request, category):
     return render(request, "blog/category.html", context)
 
 
+# Full blog content View
 def post_detail(request, slug):
     """
     Renders the view for each blog post entry and its 

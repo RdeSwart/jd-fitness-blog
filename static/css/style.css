@@ -54,7 +54,7 @@ a {
 }
 
 /* CSS for 404 Page Code from https://codepen.io/Tibixx/pen/GRKmppz*/
-@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
 
 html,
 body{
@@ -229,5 +229,5 @@ div{
   100%  {
     filter: hue-rotate(0deg);
   }
-}
+} */
 
