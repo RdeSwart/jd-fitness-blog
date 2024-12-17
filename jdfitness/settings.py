@@ -150,6 +150,12 @@ cloudinary.config(
     secure=True
 )
 
+# Configuration
+cloudinary.config({ 
+    cloud_name: 'datpagqkc', 
+    api_key: '495687442948413', 
+    api_secret: 'cTs-nNqMdRPAiiQ9BtbkjP8WpB8'
+})
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
