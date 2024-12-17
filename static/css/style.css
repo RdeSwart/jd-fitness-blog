@@ -51,6 +51,16 @@ a {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    
+}
+
+.teaser-image:hover {
+  transition-duration: 1s;
+  opacity: 70%;
+}
+
+.card-img-top {
+  border-radius: 25px;
 }
 
 /* CSS for 404 Page Code from https://codepen.io/Tibixx/pen/GRKmppz*/

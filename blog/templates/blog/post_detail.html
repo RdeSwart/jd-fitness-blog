@@ -20,7 +20,11 @@
                     </small>
                 </div>
                 <div class="masthead-image">
-                    <img src="{% static 'images/jd-fitness.jpg' %}" class="img-fluid" alt="placeholder">
+                    {% if "placeholder" in post.featured_image.url %}
+                <img class="card-img-top" src="{% static 'main-image-unsplash.jpg' %}" alt="placeholder image">
+                {% else %}
+                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+                {% endif %}
                 </div>
             </div>
         </div>
