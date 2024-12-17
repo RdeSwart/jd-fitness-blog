@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
@@ -20,6 +21,7 @@ class BlogPost(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     categories = models.ManyToManyField("Category", related_name="posts")
     likes = models.ManyToManyField(User,related_name='blogpost_like', blank=True)
+    featured_image = CloudinaryField('image', default='placeholder', blank=True)
 
     class Meta:
         ordering = ["-created_on"]

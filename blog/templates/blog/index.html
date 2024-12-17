@@ -34,7 +34,11 @@
           <div class="blog-teaser card mb-6 h-100 w-90">
             <div class="card-body">
               <div class="teaser-image image-container">
-                <img src="{% static 'images/nobody.jpg' %}" class="img-fluid">
+                {% if "placeholder" in post.featured_image.url %}
+                <img class="card-img-top" src="{% static 'main-image-unsplash.jpg' %}" alt="placeholder image">
+                {% else %}
+                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+                {% endif %}
                 <div class="image-flash">
                   <p class="author">Written by: {{post.blog_author}}</p>
                 </div>
