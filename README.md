@@ -1,6 +1,6 @@
 # JD Fitness
 
-JD Fitness is a fitness blog site, which offers great advise and support to those who are interested in keeping fit and healthy, or to those looking to change their lifestyle and don’t know where to start.
+JD Health Fitness is a fitness blog site, which offers great advise and support to those who are interested in keeping fit and healthy, or to those looking to change their lifestyle and don’t know where to start.
 
 ![Am I responsive image](put here)
 

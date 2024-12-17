@@ -1,5 +1,6 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
+
 
 {% block title%}How I can help you.{% endblock%}
 {% block content %}
@@ -11,9 +12,9 @@
         </div>
         <div class="col-12">
             <!-- Title goes between these h2 tags -->
-            <h2>{{ about.title }}</h2>
+            <h2 class="about-title">{{ about.title }}</h2>
             <!-- Content goes directly underneath this -->
-            <p>{{ about.content | safe }}</p>
+            <p class="about-content">{{ about.content | safe }}</p>
         </div>
         <div class="container mt-5 mx-auto">
             <div class="row">
@@ -22,9 +23,11 @@
     </div>
 </div>
 <br>
-<div class="col-4 text-center">
-    <p>Want to get in touch to find out more?</p>
-    <a class="nav-link" href="{% url 'contact' %}">Click Here</a>
+<div class="col-12 text-center">
+    <div>
+        <p>Want to get in touch to find out more?</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'contact' %}">Click Here</a>
+    </div>
 </div>
 
-{% endblock content %}
+{% endblock %}
