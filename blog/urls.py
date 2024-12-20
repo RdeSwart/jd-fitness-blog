@@ -2,7 +2,6 @@ from . import views
 from django.urls import path, include
 from django.contrib import admin
 
-#Add url pattern for BlogDetail view
 
 urlpatterns= [
     path('', views.BlogDetail.as_view(), name='home'),
@@ -18,4 +17,5 @@ urlpatterns= [
     path("category/<category>/", views.blog_category, name='blog_category'),
 
     path('blogpost-like/<slug:slug>', views.BlogPostLike.as_view(), name='blogpost_like'),
+
 ]

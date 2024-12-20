@@ -17,14 +17,19 @@ class BlogDetail(generic.ListView):
 
 # Category View
 def blog_category(request, category):
+    """
+    Renders Blog list in certain Categories
+    """
     posts = BlogPost.objects.filter(
     categories__name__contains=category
     ).order_by("-created_on")
+    print(f"Posts in category '{category}': {[post.title for post in posts]}")  # Debug statement
     context = {
         "category": category,
         "posts": posts,
     }
     return render(request, "blog/category.html", context)
+
 
 
 # Full blog content View

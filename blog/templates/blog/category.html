@@ -1,8 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block post.title %}
+{% block content %}
 <div>
-<h2> {{ category }}</h2>
+    <h2> {{ category }}</h2>
 </div>
-{% endblock post.title %}
+<ul>
+    {% for post in posts %}
+        {% if post.slug %}
+            <li><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+{% endblock %}
