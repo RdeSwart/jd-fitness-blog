@@ -1,9 +1,10 @@
 {% extends "base.html" %}
+{% block content %}
 {% load static %}
 
 
-{% block title%}How I can help you.{% endblock%}
-{% block content %}
+<!-- {% block title%}How I can help you.{% endblock%} -->
+
 
 <div class="container mt-5">
     <div class="row">
@@ -12,9 +13,9 @@
         </div>
         <div class="col-12">
             <!-- Title goes between these h2 tags -->
-            <h2 class="about-title">{{ about.title }}</h2>
+            <h2 class="about-title">Title: {{about.title}}</h2>
             <!-- Content goes directly underneath this -->
-            <p class="about-content">{{ about.content | safe }}</p>
+            <p class="about-content">About:{{about.content | safe}}</p>
         </div>
         <div class="container mt-5 mx-auto">
             <div class="row">

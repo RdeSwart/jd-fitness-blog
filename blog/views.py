@@ -18,7 +18,7 @@ class BlogDetail(generic.ListView):
 # Category View
 def blog_category(request, category):
     posts = BlogPost.objects.filter(
-        categories__name__contains=category
+    categories__name__contains=category
     ).order_by("-created_on")
     context = {
         "category": category,

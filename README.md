@@ -16,11 +16,11 @@ JD Health Fitness is a fitness blog site, which offers great advise and support 
 
 4. [Strategy / Site Goals](#strategy—site-goals)
 
-    * [Scope / User Stories](#scope- - user-stories)
+    * [Scope / User Stories](#scope-user-stories)
 
-    * [Structure / Design](#structure - - design)
+    * [Structure / Design](#structure-design)
 
-    * [Skeleton / Wireframes](#skeleton - - wireframes)
+    * [Skeleton / Wireframes](#skeleton-wireframes)
 
     * [Surface](#surface)
 
@@ -139,11 +139,21 @@ Going for a modern, sleek design to show the vibe of the company, which takes on
 
 #### About Page
 
+Continuing the theme throughout the website, the About page features the staff at JD Fitness Health and their credentials.
+
 #### Registration Page
+
+Using Crispy Forms and Allauth, site users can register for their own account in order to react to or comment on a blog post
 
 #### Login Page
 
-#### Course Page
+Using Crispy Forms and Allauth, registered users can log in to their account on this page
+
+#### Contact Page
+
+Again using Crispy Forms, any site user, whether registered or not can avail of the contact form and send a message to the site admin/owner.
+
+A success message will display.
 
 ## Skeleton / Wireframes
 
@@ -155,7 +165,7 @@ Balsamiq link images here
 
 JD Fitness wanted to give a modern, energetic feel to the website.
 
-Colours used are:…..
+The main colours used are: rgb(245, 240, 240)
 
 * Typography:
 
