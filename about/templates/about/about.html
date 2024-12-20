@@ -11,11 +11,11 @@
         <div class="col-4 text-center">
             <img src="{% static 'images/jd-fitness.jpg' %}" class="img-fluid" alt="Profile picture of owner Josh" />
         </div>
-        <div class="col-12">
+        <div class="col-8">
             <!-- Title goes between these h2 tags -->
-            <h2 class="about-title">Title: {{about.title}}</h2>
+            <h2 class="about-title"> {{about.title}}</h2>
             <!-- Content goes directly underneath this -->
-            <p class="about-content">About:{{about.content | safe}}</p>
+            <p class="about-content">{{about.content | safe}}</p>
         </div>
         <div class="container mt-5 mx-auto">
             <div class="row">
