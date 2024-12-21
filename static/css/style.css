@@ -24,8 +24,9 @@ a {
 }
 
 .btn-lg {
-  --bs-btn-font-size: 1rem;
+    --bs-btn-font-size: 1rem;
 }
+
 .scale {
     width: 100%;
     height: auto;
@@ -54,28 +55,28 @@ a {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    
+
 }
 
 .teaser-image:hover {
-  transition-duration: 1s;
-  opacity: 70%;
+    transition-duration: 1s;
+    opacity: 70%;
 }
 
 .card-img-top {
-  border-radius: 25px;
+    border-radius: 25px;
 }
 
 /* Scroll to top button */
 .top-btn {
-  all: unset;
-  font-size:1.5rem; 
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  cursor: pointer;
-  transform:scale(1.8);
-  opacity: 0;
-  transition: .3s;
+    all: unset;
+    font-size: 1.5rem;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    transform: scale(1.8);
+    opacity: 0;
+    transition: .3s;
 }
 
