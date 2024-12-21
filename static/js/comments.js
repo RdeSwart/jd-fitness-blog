@@ -56,3 +56,5 @@ topBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
 // On scroll, Show/Hide the btn with animation
 window.onscroll = () => topBtn.style.opacity = window.scrollY > 500 ? 1 : 0;
+
+

@@ -3,7 +3,8 @@
 
 {% block content%}
 <header>
-  <div class="p-5 text-center bg-image"><img src="static/images/main-image-unsplash.jpg" alt="main image" class="img-fluid">
+  <div class="p-5 text-center bg-image"><img src="static/images/main-image-unsplash.jpg" alt="main image"
+      class="img-fluid">
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
@@ -36,9 +37,8 @@
                 {% if "placeholder" in post.featured_image.url %}
                 <img class="card-img-top" src="{% static 'main-image-unsplash.jpg' %}" alt="main image">
                 {% else %}
-                <a class="btn btn-primary btn-lg" href="{% url 'post_detail' post.slug %}" class="post-link"
-                  class="post-link"><img class="card-img-top" src=" {{ post.featured_image.url }}"
-                    alt="{{ post.title }}"></a>
+                <a class="btn btn-primary btn-lg" href="{% url 'post_detail' post.slug %}" class="post-link" id="image-border"><img
+                    class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}"></a>
                 {% endif %}
                 <div class="image-flash">
                   <p class="author">Written by: {{post.blog_author}}</p>
@@ -49,12 +49,12 @@
               </a>
 
               <hr />
-              <small>
-                <p class="card-text text-muted h6">{{ post.created_on}} | Categories:
+              
+                <p class="card-text text-muted h6">{{ post.created_on}} | Category:
                   {% for category in post.categories.all %}
                   <a href="{% url 'blog_category' category.name %}">{{ category.name }}</a> {% endfor %}
                 </p>
-              </small>
+              
               <a class="btn btn-primary btn-lg" href="{% url 'post_detail' post.slug %}" class="post-link">Read More</a>
             </div>
           </div>

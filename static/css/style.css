@@ -67,6 +67,11 @@ a {
     border-radius: 25px;
 }
 
+#image-border {
+    border: none;
+    background-color: white;
+}
+
 /* Scroll to top button */
 .top-btn {
     all: unset;

@@ -17,10 +17,10 @@ Feature: | Action: | Expected Result: | Pass/Fail:
 <ins>Contact Page</ins>| Click on Contact Link| Contact form renders| Pass
 <ins>Contact Form</ins>| Fill in form and submit| Success message|Pass
 <ins>Register</ins>|Click on register link| Renders Register form| Pass
-<ins>Register-successful</ins>|Fill form to create new account| Successful message| Check
-<ins>Register-unsuccessful</ins>|Missing info on form| correction feedback message| Check
+<ins>Register-successful</ins>|Fill form to create new account| Successful message| Pass
+<ins>Register-unsuccessful</ins>|Missing info on form| correction feedback message| Pass
 <ins>Login-successful</ins>|Login with Username & Password| Logged in message on top| Pass
-<ins>Login-unsuccessful</ins>|Wrong login details| Feedback message to correct| Check
+<ins>Login-unsuccessful</ins>|Wrong login details| Feedback message to correct| Pass
 <ins>404 Page</ins>| Wrong address entered???| 404 Page renders with link to go back Home| Check
 <ins>403 Page</ins>| Access Denied| 403 Page renders with link to go back Home| Check
 
