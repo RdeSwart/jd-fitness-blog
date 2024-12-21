@@ -2,7 +2,7 @@
 
 JD Health Fitness is a fitness blog site, which offers great advise and support to those who are interested in keeping fit and healthy, or to those looking to change their lifestyle and don’t know where to start.
 
-![Am I responsive image](put here)
+![Am I responsive image](static/images/home-page.png)
 
 [Click here to view the live site]( https://jd-fitness-blog-a23552dd7129.herokuapp.com/)
 
@@ -54,7 +54,7 @@ I used Github Issues to document user stories [see here](#https://github.com/use
 To give prioritization, I used the [MoSCoW Method](#link-it-here). The acronym MoSCoW represents four categories of initiatives: must-have, should-have, could-have, and won't-have, or will not have right now. MORE ON THIS WHEN THEY WRITTEN!!
 
 
-Here is the Kanban Board I used to keep everything in order ![screenshot of Kanban](link)
+Here is the Kanban Board I used to keep everything in order ![screenshot of Kanban](https://github.com/users/RdeSwart/projects/3)
 
 
 Review of agile method:
@@ -140,21 +140,23 @@ Going for a modern, sleek design to show the vibe of the company, which takes on
 #### About Page
 
 Continuing the theme throughout the website, the About page features the staff at JD Fitness Health and their credentials.
+![About Page](static/images/about-page.png)
 
 #### Registration Page
 
 Using Crispy Forms and Allauth, site users can register for their own account in order to react to or comment on a blog post
-
+![Registration Page](static/images/register-page.png)
 #### Login Page
 
-Using Crispy Forms and Allauth, registered users can log in to their account on this page
+Using Crispy Forms and Allauth, registered users can log in to their account on this page.
+![Login Page](static/images/login-page.png)
 
 #### Contact Page
 
 Again using Crispy Forms, any site user, whether registered or not can avail of the contact form and send a message to the site admin/owner.
-
+![Contact Page](static/images/contact-page.png)
 A success message will display.
-
+ADD SCREENSHOT HERE!!!!!!!!!!!!!!!
 ## Skeleton / Wireframes
 
 Balsamiq link images here
@@ -270,9 +272,12 @@ Please see [here](#testing.md) for info on testing
 
 ### <int>Bugs</int>
 
-Bug encountered:
+Bug encountered: About Page not rendering database content
 
-Bug Fix:
+Bug Fix: Change .all() to .first() 
+
+ie.about = About.objects.first()
+This was because my template was only assuming a single object (about.title and about.content)
 
 Any unfixed Bugs:
 
@@ -324,15 +329,24 @@ To for the repository:
 ## Credits
 
 * Code Institute’s walkthrough project: “I think therefore I blog"
+* Scroll-to-top button from [Stack Overflow](https://stackoverflow.com/questions/1144805/scroll-to-the-top-of-the-page-using-javascript)
+* [Django Central](https://djangocentral.com/creating-comments-system-with-django/)
+for creating the comment section model
+* [ByteGrad](https://www.youtube.com/watch?v=a-VSiUtMayM) Tutorial for NavBar Burger
+* [Medium.com](https://medium.com/strategio/my-django-blog-project-5ac08d84b0f8) Tutorial on how to add likes to the blog
+* [Twilio.com](https://www.twilio.com/en-us/blog/build-contact-form-python-django-twilio-sendgrid) Tutorial on contact form submissions
+
 
 ### Media used
 
 * Logo is from:
 
 * Images from:
+* [Aura leisure](https://www.auraleisure.ie/blog/)
+for blog post content
+* [Imresizer](https://imresizer.com/) to resize the favicon.
+* [Flaticon](https://www.flaticon.com/free-icons/gym) for the Gym favicon
+* 
+
 
 [Back to Top](#back-to-top)
-
-
-| Feature    | Action    | Expected Result      | Pass/Fail   |
-| Landing Page| 
