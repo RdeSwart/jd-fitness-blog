@@ -4,6 +4,7 @@ from django.views import generic, View
 from django.contrib import messages
 from .models import BlogPost, Comment, Category
 from .forms import CommentForm
+from django.contrib.auth.decorators import login_required
 
 # Overview list of blogs View
 class BlogDetail(generic.ListView):
@@ -23,7 +24,6 @@ def blog_category(request, category):
     posts = BlogPost.objects.filter(
     categories__name__contains=category
     ).order_by("-created_on")
-    print(f"Posts in category '{category}': {[post.title for post in posts]}")  # Debug statement
     context = {
         "category": category,
         "posts": posts,

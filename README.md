@@ -307,6 +307,7 @@ ie.about = About.objects.first()
 This was because my template was only assuming a single object (about.title and about.content)
 
 Any unfixed Bugs:
+Like counter when logged in.
 
 [Back to Top](#JD-Fitness)
 
@@ -376,6 +377,7 @@ for creating the comment section model
 * [Twilio.com](https://www.twilio.com/en-us/blog/build-contact-form-python-django-twilio-sendgrid) Tutorial on contact form submissions
 * Code Institute’s Tutor, Thomas, who helped explain the database better to me, specifically Cloudinary serving static files.
 * [Stack overflow](https://stackoverflow.com/) and [She Codes](https://www.shecodes.io/), which I used to search any issues I was having or not understanding.
+* My mentor, Dick Vlaanderen who is always a great support.
 
 
 ### Media used

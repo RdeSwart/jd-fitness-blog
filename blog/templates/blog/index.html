@@ -37,7 +37,7 @@
                 {% if "placeholder" in post.featured_image.url %}
                 <img class="card-img-top" src="{% static 'main-image-unsplash.jpg' %}" alt="main image">
                 {% else %}
-                <a class="btn btn-primary btn-lg" href="{% url 'post_detail' post.slug %}" class="post-link" id="image-border"><img
+                <a class="btn btn-primary btn-lg post-link" href="{% url 'post_detail' post.slug %}" id="image-border"><img
                     class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}"></a>
                 {% endif %}
                 <div class="image-flash">
@@ -46,16 +46,16 @@
               </div>
               <h2 class="card-title text-center">{{ post.title }}</h2>
               <p class="card-text">{{ post.excerpt }}</p>
-              </a>
+              
 
-              <hr />
+              <hr>
               
                 <p class="card-text text-muted h6">{{ post.created_on}} | Category:
                   {% for category in post.categories.all %}
                   <a href="{% url 'blog_category' category.name %}">{{ category.name }}</a> {% endfor %}
                 </p>
               
-              <a class="btn btn-primary btn-lg" href="{% url 'post_detail' post.slug %}" class="post-link">Read More</a>
+              <a class="btn btn-primary btn-lg post-link" href="{% url 'post_detail' post.slug %}" >Read More</a>
             </div>
           </div>
         </div>
@@ -69,6 +69,7 @@
       </div>
     </div>
   </div>
+</div>
   <br>
 
   <!--Pagination-->
