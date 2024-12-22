@@ -80,6 +80,7 @@ def post_detail(request, slug):
 
 
 # Edit Comment View
+@login_required
 def comment_edit(request, slug, comment_id):
     """
     Login required to edit comments
@@ -103,6 +104,7 @@ def comment_edit(request, slug, comment_id):
 
 
 # Delete Comment View
+@login_required
 def comment_delete(request, slug, comment_id):
     """
     Login required to delete users own comment only
